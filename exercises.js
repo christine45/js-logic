@@ -70,7 +70,7 @@ console.log(login("test1234"));
 function isGreaterThan(first, second){
   if (first >= second){
     return true;
-  }else {
+  }else{
     return false;
   
   }
@@ -90,11 +90,10 @@ console.log(isGreaterThan(10, 9));
  * Console.log your result.
 */
 function mustBeTrue(boo){
-  if (boo===true){
+  if (boo > 23);
     return true;
-  }
 }
-console.log(mustBeTrue(boo));
+console.log(mustBeTrue(78));
 /*
  * #5
  * Function - bigBird
@@ -106,7 +105,13 @@ console.log(mustBeTrue(boo));
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
+function bigBird(word){
+  if (word.length === 3){
+  return "Word to Big Bird!";
+} 
+}
 
+console.log(bigBird("cat"));
 
 /*
  * #6
@@ -120,8 +125,14 @@ console.log(mustBeTrue(boo));
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
-
-
+function isEqual(first, second){
+  if (first === second){
+  return "You look mahevlous!"; 
+}else{
+  return "I don't know who you are anymore." ;
+}
+}
+console.log(isEqual("lovely", "lovely"));
 /*
  * #7
  * Function - notEqual
@@ -134,8 +145,14 @@ console.log(mustBeTrue(boo));
  * If the strings are not equal, the function will return the message "Opposites do attract." Otherwise, return the message: "Cause it's like you're my mirror." 
  * Console.log your result.
 */
-
-
+function notEqual(first, second){
+  if (first === second){
+  return "Cause it's like you're my mirror.";
+}else{
+  return "Opposites do attract."
+}
+}
+console.log(notEqual("hi", "hello"));
 /*
  * #8
  * Function - spareChange
@@ -147,8 +164,14 @@ console.log(mustBeTrue(boo));
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function spareChange(money){
+  if (money > 100) {
+    return true;
+  }else {
+    return false;
+  }
+}
+console.log(spareChange(90));
 /*
  * #9
  * Function - dirty30
@@ -162,8 +185,15 @@ console.log(mustBeTrue(boo));
  * The function will return true if the sum of all the number values is greater than 30, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function dirty30(one, two, three){
+  if ((one + two + three) > 30){
+    return true
+  }else{
+    return false
+  }
+}
+console.log(dirty30(4, 23, 6));
+console.log(dirty30(2, 41, 2));
 /*
  * #10
  * Function - evenStevens
@@ -175,8 +205,14 @@ console.log(mustBeTrue(boo));
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function evenStevens(num){
+  if (num%2 === 0){
+    return true
+  }else{
+  return false
+}
+}
+console.log(evenStevens(5));
 /*
  * #11
  * Function - daClub
@@ -189,8 +225,16 @@ console.log(mustBeTrue(boo));
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
-
-
+function daClub(cover, age){
+  if (cover >= 21 & age >= 21){
+   
+      return "Welcome to the Legends Lounge.";
+    
+  }else{
+    return "Chuck E Cheese is accross the street."
+  }
+}
+console.log(daClub(14, 21));
 /*
  * #12
  * Function - graduation
@@ -203,8 +247,15 @@ console.log(mustBeTrue(boo));
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
-
-
+function graduation(credits, thesis){
+  if (credits >=120 || thesis === true){
+    return "Congratulations on a job well done.";
+  }else{
+    return "See you in summer school."
+  }
+}
+var gradResults = graduation (120, false);
+console.log(gradResults);
 /*
  * #13
  * Function - moneyTrain
@@ -231,7 +282,24 @@ console.log(mustBeTrue(boo));
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
+var budget = 65;
+console.log(budget);
 
+var doughnutPrice = 2;
+console.log(doughnutPrice);
+
+var doughnutBought = 0;
+console.log(doughnutBought);
+
+function buyDoughnut(){
+  if (budget>=doughnutPrice){
+    budget = budget - doughnutPrice;
+    doughnutBought++;
+  }
+}
+buyDoughnut();
+console.log(budget);
+console.log(doughnutBought);
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
@@ -243,11 +311,11 @@ The for loop is made up for 3 parts:
 3) Update (i.e. i++)
 */
 
-var toyotaModels = ["Corolla", "Prius", "4 Runner", "Camry", "Land Cruiser"];
+/*var toyotaModels = ["Corolla", "Prius", "4 Runner", "Camry", "Land Cruiser"];
 
 for (var i = 0; i<toyotaModels.length; i++){
    console.log("Toyota " + toyotaModels[i]);
-}
+}*/
 
 
 /* 
@@ -282,8 +350,16 @@ for (var i = 0; i<toyotaModels.length; i++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
+var numArray = [22, 33, 44, 55, 66];
+var total = 0;
 
-
+function sumItUp(arr){
+  for (var i =0; i<arr.length; i++){
+    total = total + arr[i];
+  }
+  return total;
+}
+console.log(sumItUp(numArray));
 /*
  * #18
  * Function - allStars
@@ -300,6 +376,22 @@ for (var i = 0; i<toyotaModels.length; i++){
   var east = [];
   var west = [];
 
+function allStars(ballers){
+  for (var i = 0; i<ballers.length; i++){
+      console.log(ballers[i]);
+      if ([i]%2 === 0){
+        east.push(ballers[i]);
+        console.log(ballers[i]);
+      }else {
+        west.push(ballers[i]);
+
+      }
+  }
+  return ballers;
+}
+console.log(allStars(players));
+console.log(east);
+console.log(west);
 /*
  * #19
  * Function - subways
@@ -314,7 +406,17 @@ for (var i = 0; i<toyotaModels.length; i++){
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
-
+function subways(special){
+  for (var i =0; i<special.length; i++){
+    if (i%2 === 1){
+      console.log(i);
+      special[i] = ("Classic Tuna");
+//special.splice(i, 1, "Classic Tuna");
+    }
+  }
+  return special;
+}
+console.log(subways(subOftheDay));
 /*
 Final Boss
  * #20
@@ -329,9 +431,19 @@ Final Boss
 
   var phrase = "An apple a day keeps Alice feeling awesome!"
   
+function removeLetter(str){
+  var newArr = [];
+  for (var i = 0; i<str.length; i++){
+    console.log(str[i]);
+    if(str[i] !== 'a' && str[i] !== "A"){
+      newArr.push(str[i]);
+    }
+  }
+  console.log(newArr);
+  return newArr;
+}
 
-
-
+removeLetter(phrase);
 
 
 
